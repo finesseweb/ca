@@ -1,0 +1,13 @@
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
+@import url(//fonts.googleapis.com/css?family=Kaushan+Script);
+
+body,html{background:url(../images/pfi.jpg) no-repeat;min-width:initial;overflow-x: hidden!important;font-family: 'Source Sans Pro', sans-serif;-webkit-font-smoothing: antialiased;min-height:100%;}
+.overlay_login{position:absolute; min-height:100%; min-width:100%; background-color:rgba(0,0,0,0.5); z-index:-1}
+label,label.title{display:block;height:56px;line-height:56px;font-weight:100;font-size:23px;text-align:right;color:#EEE}
+input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:66px;padding:0;border:0 solid #000!important;font-size:20px;padding-left:20px!important;color:#666;font-weight:100!important; width:100%}
+.white_clr{color:#fff; margin-top:20%}
+.success,.message,.cake-error,.message,.error-message {margin-bottom:20px;font-weight:100;font-size:18px; color:#F00;}
+.otp{height:40px;line-height:40px;font-weight:100;font-size:18px; text-align:center; margin-left:20%;}.otp a{color:#fff; text-decoration:none;}
+@media(max-width:767px){
+label,label.title{display:none;}	
+}

@@ -1,0 +1,207 @@
+<?php
+error_reporting(E_ALL ^ E_WARNING);
+require_once("connect.php");
+//require_once 'api_config.php';
+
+// read JSon input
+$jsondata=file_get_contents('php://input');
+$js = json_decode($jsondata, true);
+
+$district = $js['district'];
+$block = $js['block'];
+$panchayat = $js['panchayat'];
+$village = $js['village'];
+$ward = $js['ward'];
+$remarks = $js['remarks'];
+$status = $js['status'];
+$awc_code = $js['awc_code'];
+$aww_name = $js['aww_name'];
+$anm_name = $js['anm_name'];
+$asha_name = $js['asha_name'];
+$pw_due_list = $js['pw_due_list'];
+$child_due_list = $js['child_due_list'];
+$ec_due_list = $js['ec_due_list'];
+$visit_date = $js['visit_date'];
+$it_availability = $js['it_availability'];
+$it_reason = $js['it_reason'];
+$it_footfall_number  = $js['it_footfall_number'];
+$height_availability = $js['height_availability'];
+$height_reason = $js['height_reason'];
+$height_footfall_number = $js['height_footfall_number'];
+$hb_availability = $js['hb_availability'];
+$beneficiary_couselled = implode(',', $beneficiary_couselled1);
+$hb_reason = $js['hb_reason'];
+$hb_footfall_number = $js['hb_footfall_number'];
+$abdomen_availability = $js['abdomen_availability'];
+$abdomen_reason = $js['abdomen_reason'];
+$abdomen_footfall_number = $js['abdomen_footfall_number'];
+$calcium_availability = $js['calcium_availability'];
+$calcium_reason = $js['calcium_reason'];
+$calcium_footfall_number = $js['calcium_footfall_number'];
+$weight_availability = $js['weight_availability'];
+$weight_reason = $js['weight_reason'];
+$weight_footfall_number = $js['weight_footfall_number'];
+$bp_availability = $js['bp_availability'];
+$bp_reason = $js['bp_reason'];
+$bp_footfall_number = $js['bp_footfall_number'];
+$urine_availability = $js['urine_availability'];
+$urine_reason = $js['urine_reason'];
+$urine_footfall_number = $js['urine_footfall_number'];
+$ifa_availability = $js['ifa_availability'];
+$ifa_reason = $js['ifa_reason'];
+$ifa_footfall_number  = $js['ifa_footfall_number'];
+$immunisation_availability = $js['immunisation_availability'];
+$immunisation_reason = $js['immunisation_reason'];
+$immunisation_footfall_number = $js['immunisation_footfall_number'];
+$growth_availability = $js['growth_availability'];
+$growth_reason = $js['growth_reason'];
+$growth_footfall_number = $js['growth_footfall_number'];
+$condom_availability = $js['condom_availability'];
+$condom_reason = $js['condom_reason'];
+$condom_footfall_number = $js['condom_footfall_number'];
+$mala_n_availability = $js['mala_n_availability'];
+$mala_n_reason = $js['mala_n_reason'];
+$mala_n_footfall_number = $js['mala_n_footfall_number'];
+$chaya_availability = $js['chaya_availability'];
+$chaya_reason = $js['chaya_reason'];
+$chaya_footfall_number = $js['chaya_footfall_number'];
+$antara_availability = $js['antara_availability'];
+$antara_reason = $js['antara_reason'];
+$antara_footfall_number = $js['antara_footfall_number'];
+$td_availability = $js['td_availability'];
+$td_reason = $js['td_reason'];
+$td_footfall_number  = $js['td_footfall_number'];
+$ifa_blue_availability = $js['ifa_blue_availability'];
+$ifa_blue_reason = $js['ifa_blue_reason'];
+$ifa_blue_footfall_number = $js['ifa_blue_footfall_number'];
+$anc_counselling = $js['anc_counselling'];
+$child_counselling = $js['child_counselling'];
+$adolescentc_ounselling = $js['adolescentc_ounselling'];
+$pnc_visit = $js['pnc_visit'];
+$updated = $js['updated'];
+$family_counselling = $js['family_counselling'];
+$time = $js['time'];
+$updated = $js['updated'];
+
+@$status = "";
+
+
+if(!empty($district) && !empty($block) && !empty($panchayat) && !empty($village) && !empty($ward) && !empty($age) && !empty($gender) && !empty($mobile) && !empty($no_of_child) && !empty($village) && !empty($ward) && !empty($age) && !empty($gender)){
+    
+   /* $qry = "select * from description where id = '".$description_id."'";
+    $result1 = mysqli_query($conn, $qry);
+   // print_r($result1);
+   $test = mysqli_fetch_array($result1);
+ 
+        $desc_id = $test['id'];
+        @$description = trim($test['description']);
+        
+  */
+
+    $query = "INSERT INTO `afc_home_visits`(`district`, `block`,`panchayat`,`village`, `ward`, `visit_date`, `asha_accompanied`, `asha_reason`,`aww_accompanied`, `aww_reason`,`pri_accompanied`, `pri_reason`,`couple_name`, `age`, `gender`, `mobile`, `no_of_child`,`yonger_child_age`, `current_contraceptives`,`commodities_regular_supply`, `commodities_reason`,`beneficiary_couselled`,`convinced`, `contraceptives_delivery_date`, `sterilisation_of_month`, `follow_visit_date`, `remarks`, `updated`, `shg_accompanied`, `shg_reason`) VALUES('".$district."', '".$block."', '".$panchayat."','".$village."', '".$ward."', '".$visit_date."', '".$asha_accompanied."', '".$asha_reason."', '".$aww_accompanied."', '".$aww_reason."','".$pri_accompanied."', '".$pri_reason."', '".$couple_name."','".$age."', '".$gender."', '".$mobile."', '".$no_of_child."', '".$yonger_child_age."', '".$current_contraceptives."','".$commodities_regular_supply."', '".$commodities_reason."', '".$beneficiary_couselled."','".$convinced."', '".$contraceptives_delivery_date."', '".$sterilisation_of_month."', '".$follow_visit_date."', '".$remarks."', '".$updated."', '".$shg_accompanied."', '".$shg_reason."')";
+    $result = mysqli_query($conn, $query);
+    if($result){
+    
+    
+    $json = array("error" => "false", "message" => "Successfully save.");
+    
+    } else{
+        $json = array("error" => "false", "message" => "Record not save.");
+    }
+    
+  
+}else{
+    $json = array("error" => "true", "message" => "All are required fields.");
+}
+
+
+ 
+@mysqli_close($conn);
+ 
+/* Output header */
+ 
+ header('Content-type: application/json, charset=UTF-8');
+ echo json_encode($json);
+
+?>
+
+
+
+
+
+
+“district” : ““
+“block” : ““
+“panchayat” : ““ 
+“village” : ““
+“ward” : ““
+“remarks” : ““
+“status” : ““
+“awc_code” : ““
+“aww_name” : ““
+“anm_name” : ““
+“asha_name” : ““
+“pw_due_list” : ““
+“child_due_list” : ““
+“ec_due_list” : ““
+“visit_date” : ““
+“it_availability” : ““
+“it_reason” : ““
+“it_footfall_number” : ““ 
+“height_availability” : ““
+“height_reason” : ““
+“height_footfall_number” : ““
+“hb_availability” : ““
+“beneficiary_couselled” : ““
+“hb_reason” : ““
+“hb_footfall_number” : ““
+“abdomen_availability” : ““
+“abdomen_reason “ : ““
+“abdomen_footfall_number” : ““ 
+“calcium_availability” : ““
+“calcium_reason “ : ““
+“calcium_footfall_number” : ““ 
+“weight_availability” : ““
+“weight_reason” : ““
+“weight_footfall_number” : ““
+“bp_availability” : ““
+“bp_reason” : ““
+“bp_footfall_number” : ““ 
+“urine_availability” : ““
+“urine_reason” : ““
+“urine_footfall_number” : ““ 
+“ifa_availability” : ““
+“ifa_reason” : ““ 
+“ifa_footfall_number” : ““  
+“immunisation_availability” : ““ 
+“immunisation_reason” : ““
+“immunisation_footfall_number” : ““ 
+“growth_availability” : ““
+“growth_reason” : ““
+“growth_footfall_number” : ““ 
+“condom_availability” : ““
+“condom_reason” : ““
+“condom_footfall_number” : ““ 
+“mala_n_availability” : ““
+“mala_n_reason” : ““
+“mala_n_footfall_number” : ““ 
+“chaya_availability” : ““
+“chaya_reason” : ““
+“chaya_footfall_number” : ““ 
+“antara_availability” : ““
+“antara_reason” : ““
+“antara_footfall_number” : ““ 
+“td_availability” : ““
+“td_reason” : ““
+“td_footfall_number” : ““  
+“ifa_blue_availability” : ““
+“ifa_blue_reason” : ““
+“ifa_blue_footfall_number” : ““ 
+“anc_counselling” : ““
+“child_counselling” : ““ 
+“adolescentc_ounselling” : ““ 
+“pnc_visit” : ““
+“updated” : ““
+“family_counselling” : ““ 
+“time” : ““
+“updated” : ““

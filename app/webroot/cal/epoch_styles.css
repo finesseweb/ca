@@ -1,0 +1,20 @@
+table.calendar{border-collapse:collapse;background-color:#fff;border:solid #999 1px;background-color:#fff;width:215px;text-align:center;-moz-user-select:none;}
+.calendar select{width:auto; min-width:70px; margin-top:0; padding:1px 0 2px;}
+table.calendar input,table.calendar select{font-size:10px; padding:3px 4px; margin:0;}
+table.calendar td,table.calendar th{border:0;font-size:10px;text-align:center}
+div.mainheading{margin:2px}
+table.cells{border-collapse:collapse;border:solid #CCC 1px;cursor:pointer;empty-cells:show;margin:0 6px}
+table.cells th{border:solid #CCC 1px;text-align:left;font-weight:700;color:#0054E3;width:22px}
+table.cells th.wkhead{border-right:double #CCC 3px;cursor:default;width:22px}
+table.cells td{border:solid #CCC 1px;vertical-align:top;text-align:left;font-weight:700;height:20px}
+table.cells td.wkhead{background-color:#fff;text-align:center;border-right:double #CCC 3px;color:#0054E3}
+table.cells td.noselect{background-color:#EEE;color:#BBB;text-decoration:line-through;cursor:default}
+table.cells td.hlday{background-color:#9F9}
+table.cells td.wkday{background-color:#DDD}
+table.cells td.wkend{background-color:#DDD}
+table.cells td.cell_selected{background-color:#9CF;color:#000}
+table.cells td.notmnth{background-color:#FFF;color:#CCC}
+table.cells td.notallowed{background-color:#fff;color:#EEE;font-style:italic}
+table.cells td.hover{background-color:#999}
+table.cells td div{padding:1px;margin:0}
+table.cells td.curdate{background:#367fa9;color:#FFFFFF}

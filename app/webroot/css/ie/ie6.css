@@ -1,0 +1,32 @@
+body{font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.top_one{background-color:#fff; border-top:2px solid #df6133}
+.project_price{height:auto;}
+.filter_btn{margin:0; text-align:right;}
+.builder_location{padding:8px 0 0 0}
+.list_center{height:100%;}
+.fa-facebook{background:url(../../images/social_sprite.gif) 0 -112px no-repeat; height:16px; width:16px; cursor:pointer;}
+.fa-facebook:hover{background:url(../../images/social_sprite.gif) 0 0px no-repeat;}
+.fa-google-plus{background:url(../../images/social_sprite.gif) 0 -138px no-repeat; height:16px; width:16px; cursor:pointer;}
+.fa-google-plus:hover{background:url(../../images/social_sprite.gif) 0 -27px no-repeat;}
+.fa-twitter{background:url(../../images/social_sprite.gif) 0 -164px no-repeat; height:16px; width:16px; cursor:pointer;}
+.fa-twitter:hover{background:url(../../images/social_sprite.gif) 0 -53px no-repeat;}
+.fa-linkedin{background:url(../../images/social_sprite.gif) 0 -191px no-repeat; height:16px; width:16px; cursor:pointer;}
+.fa-linkedin:hover{background:url(../../images/social_sprite.gif) 0 -80px no-repeat;}
+.footer_list ul{padding:0 0 0 20px;}
+.fa-angle-double-right{background:url(../../images/social_sprite.gif) 0 -211px no-repeat; height:16px; width:16px;}
+.project_heading{margin:0;}
+.project_specific table tr td ul{list-style:none; padding:0 0 0 5px;}
+.project_specific table tr td ul li{padding:0 0 2px 20px; background:url(../../images/social_sprite.gif) 0 -211px no-repeat;}
+.fa-envelope{background:url(../../images/envelop1.gif) 0 0 no-repeat; width:30px; height:21px; padding:0 0 3px 0}
+.fa-user{background:url(../../images/social_sprite.gif) 0 -252px no-repeat; height:16px; width:16px; margin:6px 0 0 0}
+.fa-envelope-o{background:url(../../images/social_sprite.gif) 0 -231px no-repeat; height:16px; width:16px; margin:6px 0 0 0}
+.fa-flag{background:url(../../images/social_sprite.gif) 0 -274px no-repeat; height:16px; width:16px; margin:6px 0 0 0}
+.fa-phone{background:url(../../images/social_sprite.gif) 0 -294px no-repeat; height:16px; width:16px; margin:6px 0 0 0}
+.fa-comments{background:url(../../images/social_sprite.gif) 0 -314px no-repeat; height:16px; width:16px; margin:6px 0 0 0}
+.fa-file{background:url(../../images/social_sprite.gif) 0 -338px no-repeat; height:16px; width:16px;}
+.fa-youtube-play{background:url(../../images/social_sprite.gif) 0 -362px no-repeat; height:16px; width:16px;}
+.fa-tags{background:url(../../images/social_sprite.gif) 0 -377px no-repeat; height:16px; width:16px; margin:6px 0 0 0}
+.blog_heading{color:#333;}
+.grid_list{ height:100%;}
+.search_txt{padding:8px 6px; width:465px;}
+.blog_grid_right{margin:0; padding:0 0 0 2px;}
